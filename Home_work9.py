@@ -61,22 +61,16 @@ OPERATIONS = {
     'change': change_contact,
     'phone': phone_info,
     'show all': show_all,
-    "good bye": "exit",
-    "close": "exit",
-    "exit": "exit",
     "hello": hello
 }
 exit_list = ["good bye", "close", "exit"]
-massage_list = [
-    "Good bye!",
-    "How can I help you?",
-]
+
 help_message = "Please enter command:\n'show all'\n'phone (name)'\n'add (name phone)'\n'change (name new_phone)'"
 
 
 def main():
     while True:
-        value = input(F'Please enter : ')
+        value = input(F'Please enter command : ')
         func, data = parser(value)
         if func in exit_list:
             print("Good bye!")
